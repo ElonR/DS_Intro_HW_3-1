@@ -1,15 +1,13 @@
-#Part 1
 def read_line(n, file):
   try:
     file = open(file)
     count = 0
     for i in file:
       count = count + 1
-    if i == n:
-      return (i)
-
+      if count == n:
+          return i
     if count < n:
-      return ("line " + n + " doesn't exist")
+      return "line " + str(n) + " doesn't exist"
     if type(n) != int:
       return ("invalid input detected")
     if count == n:
